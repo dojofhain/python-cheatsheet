@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Variablen &mdash; Python  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Oberflächen mit TK (tkinter)" href="../tkinter/tkinter.html" />
+    <link rel="prev" title="Grundlagen" href="basics.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Python
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="basics.html">Grundlagen</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Variablen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#strings-texte">Strings (Texte)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integer-ganzzahlen">Integer (Ganzzahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#float-kommazahlen">Float (Kommazahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listen">Listen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tkinter/tkinter.html">Oberflächen mit TK (tkinter)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tkinter/tkinter.html#fenster">Fenster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tkinter/tkinter.html#widgets">Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tkinter/tkinter.html#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tkinter/tkinter.html#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tkinter/tkinter.html#entry">Entry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="basics.html">Grundlagen</a> &raquo;</li>
+        
+      <li>Variablen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="variablen">
+<h1>Variablen<a class="headerlink" href="#variablen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Variablen können wir benutzen, um uns Dinge zu merken. Sie haben einen Namen und einen Wert.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mein_name</span> <span class="o">=</span> <span class="s2">&quot;Sandra&quot;</span>
+</pre></div>
+</div>
+<p>Hier haben wir eine Variable mit dem Namen <code class="docutils literal highlight highlight-default"><span></span><span class="n">mein_name</span></code> angelegt. Sie hat jetzt den Wert <code class="docutils literal highlight highlight-default"><span></span><span class="n">Sandra</span></code>.
+Um zu sehen, welchen Wert eine Variable hat, können wir die <code class="docutils literal highlight highlight-default"><span></span><span class="nb">print</span><span class="p">()</span></code> Funktion benutzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mein_name</span><span class="p">)</span>
+<span class="go">Sandra</span>
+</pre></div>
+</div>
+<p>Den Wert einer Variable können wir jederzeit ändern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mein_name</span> <span class="o">=</span> <span class="s2">&quot;Markus&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mein_name</span><span class="p">)</span>
+<span class="go">Markus</span>
+</pre></div>
+</div>
+<p>Der Name der Variable darf aus Buchstaben, Zahlen und dem Unterstrich (_) bestehen. Für normale Variablen solltest Du nur Kleinbuchstaben verwenden.</p>
+<p>Alle Variablen haben einen Typ. Um den Typ einer Variable zu erfahren, können wir die <code class="docutils literal highlight highlight-default"><span></span><span class="nb">type</span><span class="p">()</span></code> Funktion benutzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">mein_name</span><span class="p">))</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="strings-texte">
+<h2>Strings (Texte)<a class="headerlink" href="#strings-texte" title="Link zu dieser Überschrift">¶</a></h2>
+<p>String-Variablen (‚str‘) können wir benutzen um Texte zu speichern. Den Text, den wir in die Variable speichern, müssen wir dabei in Anführungszeichen schreiben:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mein_vorname</span> <span class="o">=</span> <span class="s2">&quot;Markus&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mein_nachname</span> <span class="o">=</span> <span class="s2">&quot;Müller&quot;</span>
+</pre></div>
+</div>
+<p>Wenn wir zwei String-Variablen verbinden wollen, können wir den <code class="docutils literal highlight highlight-default"><span></span><span class="o">+</span></code> Operator verwenden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mein_name</span> <span class="o">=</span> <span class="n">mein_vorname</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">mein_nachname</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mein_name</span><span class="p">)</span>
+<span class="go">Markus Müller</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="integer-ganzzahlen">
+<h2>Integer (Ganzzahlen)<a class="headerlink" href="#integer-ganzzahlen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Integer-Variablen (‚int‘) werden benutzt um Ganzzahlen (also ohne Komma) zu speichern.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">zahl_1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">zahl_2</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">zahl_1</span><span class="p">))</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Mit Integer-Variablen können wir wie in der Mathematik rechnen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ergebnis</span> <span class="o">=</span> <span class="p">(</span><span class="n">zahl_1</span> <span class="o">+</span> <span class="n">zahl_2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+<span class="go">28</span>
+</pre></div>
+</div>
+<p>Allerdings werden für einige Operationen andere Zeichen verwendet. Für die Multiplikation der <code class="docutils literal highlight highlight-default"><span></span><span class="o">*</span></code> statt <code class="docutils literal highlight highlight-default"><span></span>•</code> und für die Division <code class="docutils literal highlight highlight-default"><span></span><span class="o">/</span></code> statt <code class="docutils literal highlight highlight-default"><span></span><span class="p">:</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hinweis</p>
+<p>Manchmal muß man eine Zahl in einen String umwandeln, dafür kann man die <code class="docutils literal highlight highlight-default"><span></span><span class="nb">str</span><span class="p">()</span></code> Funktion benutzen.</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alter</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ich bin &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alter</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; Jahre alt.&quot;</span><span class="p">)</span>
+<span class="go">Ich bin 10 Jahre alt.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="float-kommazahlen">
+<h2>Float (Kommazahlen)<a class="headerlink" href="#float-kommazahlen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Float-Variablen (‚float‘) können gebrochene Zahlen (also mit Komma) speichern. Die mathematischen Operationen funktionieren hier genauso wie bei den Ganzzahlen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">float_1</span> <span class="o">=</span> <span class="mf">11.23</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">float_2</span> <span class="o">=</span> <span class="mf">3.45</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">float_1</span><span class="p">))</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">float_1</span> <span class="o">/</span> <span class="n">float_2</span>
+<span class="go">3.255072463768116</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listen">
+<h2>Listen<a class="headerlink" href="#listen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sehr oft wollen wir mehrere Werte speichern, dafür können wir Listen verwenden. Die Werte schreiben wir dazu in eckige Klammern und trennen sie mit einem Komma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spieler</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Markus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jana&quot;</span><span class="p">,</span> <span class="s2">&quot;Fritz&quot;</span> <span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">spieler</span><span class="p">)</span>
+<span class="go">[&#39;Sandra&#39;, &#39;Markus&#39;, &#39;Jana&#39;, &#39;Fritz&#39;]</span>
+</pre></div>
+</div>
+<p>Jetzt haben wir eine Variable mit dem Name <code class="docutils literal highlight highlight-default"><span></span><span class="n">spieler</span></code>, in der die 4 Spieler gespeichert sind. Wenn wir uns einen einzelnen Wert anschauen wollen, können wir die Position in eckigen Klammern schreiben:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">spieler</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">Sandra</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">spieler</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">Jana</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hinweis</p>
+<p class="last">Die Zählung der Position beginnt immer mit der 0. Für den ersten Spieler benutzen wir also die 0, für den zweiten die 1, usw.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Zuletzt aktualisiert am 03.10.2018.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
