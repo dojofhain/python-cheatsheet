@@ -81,6 +81,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#strings-texte">Strings (Texte)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#integer-ganzzahlen">Integer (Ganzzahlen)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#float-kommazahlen">Float (Kommazahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bool">Bool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#listen">Listen</a></li>
 </ul>
 </li>
@@ -242,6 +243,20 @@ Um zu sehen, welchen Wert eine Variable hat, können wir die <code class="docuti
 </pre></div>
 </div>
 </div>
+<div class="section" id="bool">
+<h2>Bool<a class="headerlink" href="#bool" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Variablen vom Typ bool können nur zwei Werte annehmen True (richtig) oder False (falsch).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ergebnis</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ergebnis</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">))</span>
+<span class="go">&lt;class &#39;bool&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="listen">
 <h2>Listen<a class="headerlink" href="#listen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Sehr oft wollen wir mehrere Werte speichern, dafür können wir Listen verwenden. Die Werte schreiben wir dazu in eckige Klammern und trennen sie mit einem Komma:</p>
@@ -276,7 +291,7 @@ Um zu sehen, welchen Wert eine Variable hat, können wir die <code class="docuti
 
   <div role="contentinfo">
     <p>
-      Zuletzt aktualisiert am 03.10.2018.
+      Zuletzt aktualisiert am 04.10.2018.
 
     </p>
   </div> 

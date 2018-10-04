@@ -82,6 +82,21 @@ Float-Variablen ('float') können gebrochene Zahlen (also mit Komma) speichern. 
 >>> float_1 / float_2
 3.255072463768116
 
+Bool
+^^^^
+
+Variablen vom Typ bool können nur zwei Werte annehmen True (richtig) oder False (falsch).
+
+>>> ergebnis = (3 > 2)
+>>> print(ergebnis)
+True
+>>> ergebnis = (5 < 4)
+>>> print(ergebnis)
+False
+>>> print(type(ergebnis))
+<class 'bool'>
+
+
 Listen
 ^^^^^^
 
