@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Styling (Aussehen) &mdash; Python  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="Widgets" href="widgets.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Python
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">Grundlagen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/variables.html">Variablen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#strings-texte">Strings (Texte)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#integer-ganzzahlen">Integer (Ganzzahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#float-kommazahlen">Float (Kommazahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#bool">Bool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#listen">Listen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="tkinter.html">Oberflächen mit TK (tkinter)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Fenster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgets.html">Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#entry">Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Styling (Aussehen)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eigenschaften">Eigenschaften</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tkinter.html">Oberflächen mit TK (tkinter)</a> &raquo;</li>
+        
+      <li>Styling (Aussehen)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="styling-aussehen">
+<h1>Styling (Aussehen)<a class="headerlink" href="#styling-aussehen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Die meisten Widgets lassen sich in ihrem Aussehen beeinflussen. Dies kann entweder beim Erstellen passieren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oder zu einem späteren Zeitpunkt über die <code class="docutils literal highlight highlight-default"><span></span><span class="n">config</span><span class="p">()</span></code> Methode:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="eigenschaften">
+<h2>Eigenschaften<a class="headerlink" href="#eigenschaften" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im folgenden sind die wichtigsten Eigenschaften aufgelistet, die für alle Widgets gesetzt werden können.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="60%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hintergrundfarbe setzen</span>
+<span class="c1"># Farben können durch ihren Namen angegeben werden</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../_images/styling_background.png" src="../_images/styling_background.png" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vordergrundfarbe (Textfarbe) setzen</span>
+<span class="c1"># Farben können durch ihre RGB-Werte angegeben werden</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">foreground</span><span class="o">=</span><span class="s2">&quot;#00AA00&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../_images/styling_foreground.png" src="../_images/styling_foreground.png" />
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Zeichensatz (Font) setzen</span>
+<span class="c1"># Das Tuple kann 3 Werte enthalten:</span>
+<span class="c1"># 1. Schriftart (&quot;Courier&quot;, &quot;Helvetica&quot;, &quot;Times&quot;)</span>
+<span class="c1"># 2. Schriftgröße</span>
+<span class="c1"># 3. Schriftschnitt (&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;normal&quot;)</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Helvetica&quot;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;bold&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../_images/styling_font.png" src="../_images/styling_font.png" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Für mehrzeiligen Text kann die Ausrichtung gesetzt werden</span>
+<span class="c1"># mögliche Werte: &quot;left&quot;, &quot;center&quot;, &quot;right&quot;</span>
+<span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">justify</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../_images/styling_justify_right.png" src="../_images/styling_justify_right.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Zuletzt aktualisiert am 04.10.2018.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

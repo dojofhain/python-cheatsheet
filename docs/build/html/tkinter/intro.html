@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Oberflächen mit TK (tkinter) &mdash; Python  Dokumentation</title>
+  <title>Fenster &mdash; Python  Dokumentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Fenster" href="intro.html" />
-    <link rel="prev" title="Variablen" href="../basics/variables.html" /> 
+    <link rel="next" title="Widgets" href="widgets.html" />
+    <link rel="prev" title="Oberflächen mit TK (tkinter)" href="tkinter.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,16 +87,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Oberflächen mit TK (tkinter)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Fenster</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tkinter.html">Oberflächen mit TK (tkinter)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fenster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="widgets.html">Widgets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="widgets.html#button">Button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="widgets.html#label">Label</a></li>
 <li class="toctree-l3"><a class="reference internal" href="widgets.html#entry">Entry</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="styling.html">Styling (Aussehen)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="styling.html#eigenschaften">Eigenschaften</a></li>
 </ul>
 </li>
 </ul>
@@ -146,7 +142,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Oberflächen mit TK (tkinter)</li>
+          <li><a href="tkinter.html">Oberflächen mit TK (tkinter)</a> &raquo;</li>
+        
+      <li>Fenster</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,23 +161,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="oberflachen-mit-tk-tkinter">
-<h1>Oberflächen mit TK (tkinter)<a class="headerlink" href="#oberflachen-mit-tk-tkinter" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Fenster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="widgets.html#button">Button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="widgets.html#label">Label</a></li>
-<li class="toctree-l2"><a class="reference internal" href="widgets.html#entry">Entry</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="styling.html">Styling (Aussehen)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="styling.html#eigenschaften">Eigenschaften</a></li>
-</ul>
-</li>
-</ul>
-</div>
+  <p>Das Modul <code class="docutils literal highlight highlight-default"><span></span><span class="n">tkinter</span></code> können wir benutzen, um grafische Bedienoberflächen zu programmieren.</p>
+<div class="section" id="fenster">
+<h1>Fenster<a class="headerlink" href="#fenster" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Als erstes erzeugen wir ein Fenster, in dem wir die Elemente unseres Programs anordnen können.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>           <span class="c1"># das modul tkinter wird importiert</span>
+
+<span class="n">fenster</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>                  <span class="c1"># ein Fenster wird erzeugt</span>
+<span class="n">fenster</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hallo Welt&quot;</span><span class="p">)</span>     <span class="c1"># wir setzen den Titel des Fensters</span>
+
+<span class="n">fenster</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>              <span class="c1"># wir starten die Anwendung</span>
+</pre></div>
+</td></tr></table></div>
+<img alt="../_images/window.png" class="align-right" src="../_images/window.png" />
+<p>So ungefähr sieht das Ergebnis aus:</p>
+<p><br></p>
 </div>
 
 

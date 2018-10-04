@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Widgets &mdash; Python  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Python
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">Grundlagen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/variables.html">Variablen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#strings-texte">Strings (Texte)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#integer-ganzzahlen">Integer (Ganzzahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#float-kommazahlen">Float (Kommazahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#bool">Bool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#listen">Listen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.html">Oberflächen mit TK (tkinter)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Fenster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgets.html">Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#entry">Entry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Widgets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="widgets">
+<h1>Widgets<a class="headerlink" href="#widgets" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Die einzelnen Elemente der Oberfläche werden Widgets genannt.</p>
+<div class="section" id="button">
+<h2>Button<a class="headerlink" href="#button" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Button (auch Schaltfläche) wird benutzt, wenn eine einzelne Aktion ausgeführt werden soll.
+Als erstes definieren wir eine Funktion, die beim Click auf den Button aufgerufen wird:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">button_clicked</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Der Button wurde gedrückt&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>nun können wir den Button erzeugen und anzeigen:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Drück mich!&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">button_clicked</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>In Zeile 1 wird er Button erstellt. Mit dem Parameter <code class="docutils literal highlight highlight-default"><span></span><span class="n">text</span></code> können wir festlegen, was auf dem Button steht. Über den Paramter <code class="docutils literal highlight highlight-default"><span></span><span class="n">command</span></code> verknüpfen wird den Button mit unserer Funktion von oben.
+In Zeile 2 wird unser Button zur Oberfläche hinzugefügt und angezeigt.</p>
+<img alt="../_images/button.png" class="align-right" src="../_images/button.png" />
+<p>Wenn wir das Program starten, könnte das z.B. so aussehen.
+Bei einem Click auf den Button sollten wir in der Console den Text ‚Der Button wurde gedrückt‘ sehen.</p>
+<p><br></p>
+</div>
+<div class="section" id="label">
+<h2>Label<a class="headerlink" href="#label" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="../_images/label.png" class="align-right" src="../_images/label.png" />
+<p>Labels sind Widgets mit denen man Text anzeigen kann. Wichtig ist hier Zeile 2, da wird der Text gesetzt.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Ich bin ein Label&quot;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p><br></p>
+</div>
+<div class="section" id="entry">
+<h2>Entry<a class="headerlink" href="#entry" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="../_images/entry.png" class="align-right" src="../_images/entry.png" />
+<p>Ein Entry-Widget ist ein Eingabefeld, in das man Text eintragen kann. Wir könnten es z.B. benutzen, um den Nutzer nach seinem Namen zu fragen.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">eingabe_feld</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">)</span>
+<span class="n">eingabe_feld</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>Um den Text aus dem Widget auszulesen, benutzen wir die get() Methode:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">eingabe</span> <span class="o">=</span> <span class="n">eingabe_feld</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">eingabe</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Zuletzt aktualisiert am 04.10.2018.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
