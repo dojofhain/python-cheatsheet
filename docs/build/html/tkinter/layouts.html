@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Geometrie-Manager (Anordnung) &mdash; Python  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="Styling (Aussehen)" href="styling.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Python
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/basics.html">Grundlagen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/variables.html">Variablen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#strings-texte">Strings (Texte)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#integer-ganzzahlen">Integer (Ganzzahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#float-kommazahlen">Float (Kommazahlen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#bool">Bool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/variables.html#listen">Listen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="tkinter.html">Oberflächen mit TK (tkinter)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Fenster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgets.html">Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="widgets.html#entry">Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="styling.html">Styling (Aussehen)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="styling.html#eigenschaften">Eigenschaften</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Geometrie-Manager (Anordnung)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pack">Pack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid">Grid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tkinter.html">Oberflächen mit TK (tkinter)</a> &raquo;</li>
+        
+      <li>Geometrie-Manager (Anordnung)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geometrie-manager-anordnung">
+<h1>Geometrie-Manager (Anordnung)<a class="headerlink" href="#geometrie-manager-anordnung" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Mit Hilfe des Geometrie-Managers können wir die Anordnung der Widgets im Fenster bestimmen. Die beiden wichtigsten sind <a class="reference internal" href="#pack">Pack</a> und <a class="reference internal" href="#grid">Grid</a>.</p>
+<div class="section" id="pack">
+<h2>Pack<a class="headerlink" href="#pack" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beim Pack-Geometrie-Manager „packen“ wir die Widgets nacheinander in das Fenster. In unserem Beispiel verwenden wir Labels, aber das Prinzip gilt für alle Widgets. Wenn wir keine Optionen angeben, werden die Widgets untereinander gepackt und sind nur so groß wie nötig:</p>
+<img alt="../_images/layout_pack_default.png" class="align-right" src="../_images/layout_pack_default.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>Über die Optionen <code class="docutils literal highlight highlight-default"><span></span><span class="n">fill</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">expand</span></code> können wir steuern, ob die Widgets mehr Platz bekommen als nötig. Der Parameter <code class="docutils literal highlight highlight-default"><span></span><span class="n">fill</span></code> kann die Werte <code class="docutils literal highlight highlight-default"><span></span><span class="n">X</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">Y</span></code> oder <code class="docutils literal highlight highlight-default"><span></span><span class="n">BOTH</span></code> annehmen.</p>
+<img alt="../_images/layout_pack_fill.png" class="align-right" src="../_images/layout_pack_fill.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">BOTH</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Über den Paramter <code class="docutils literal highlight highlight-default"><span></span><span class="n">anchor</span></code> legen wir fest, an welcher Seite die Widgets ausgerichtet werden. Folgende Werte sind möglich: <code class="docutils literal highlight highlight-default"><span></span><span class="n">NW</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">N</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">NE</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">E</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">SE</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">S</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">SW</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">W</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">CENTER</span></code>. Die Buchstaben kommen von den englischen Namen für die Himmelsrichtungen: (N)orth, (E)ast, (S)outh und (W)est.</p>
+<img alt="../_images/layout_pack_anchor.png" class="align-right" src="../_images/layout_pack_anchor.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">anchor</span><span class="o">=</span><span class="n">W</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">anchor</span><span class="o">=</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wenn wir den Widgets etwas mehr Abstand zueinander geben wollen, können wir die Paramter <code class="docutils literal highlight highlight-default"><span></span><span class="n">padx</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">pady</span></code> verwenden. Für den Abstand innerhalb des Widgets heißen sie <code class="docutils literal highlight highlight-default"><span></span><span class="n">ipadx</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">ipady</span></code>.</p>
+<img alt="../_images/layout_pack_padding.png" class="align-right" src="../_images/layout_pack_padding.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">ipadx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ipady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Über den <code class="docutils literal highlight highlight-default"><span></span><span class="n">side</span></code> Paramter können wir die Widgets auch nebeneinander anordnen. Die möglichen Werte sind <code class="docutils literal highlight highlight-default"><span></span><span class="n">LEFT</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">TOP</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">RIGHT</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">BOTTOM</span></code>.</p>
+<img alt="../_images/layout_pack_side.png" class="align-right" src="../_images/layout_pack_side.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">)</span>
+
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Label 3&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">label_3</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">RIGHT</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="grid">
+<h2>Grid<a class="headerlink" href="#grid" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beim Grid-Geometrie-Manager unterteilen wir das Fenster in Gedanken in Zeilen (row) und Spalten (column). Für jedes Widget können wir nun angeben, an welcher Postion auf dem Gitter es angezeigt werden soll.</p>
+<img alt="../_images/layout_grid_default.png" class="align-right" src="../_images/layout_grid_default.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">label_3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">label_4</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">)</span>
+<span class="n">label_4</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Damit sich das Gitter mit dem Fenster vergößert, können wir den Spalten und Zeilen ein relatives Gewicht (<code class="docutils literal highlight highlight-default"><span></span><span class="n">weight</span></code>) zuweisen.</p>
+<img alt="../_images/layout_grid_weight.png" class="align-right" src="../_images/layout_grid_weight.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">fenster</span><span class="o">.</span><span class="n">columnconfigure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fenster</span><span class="o">.</span><span class="n">columnconfigure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fenster</span><span class="o">.</span><span class="n">rowconfigure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fenster</span><span class="o">.</span><span class="n">rowconfigure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wenn die Gitterzelle größer ist als das Widget, können wir das Verhalten über den <code class="docutils literal highlight highlight-default"><span></span><span class="n">sticky</span></code> Parameter steuern. Als Werte sind wieder die Himmelsrichtungen <code class="docutils literal highlight highlight-default"><span></span><span class="n">N</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">E</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">S</span></code>, <code class="docutils literal highlight highlight-default"><span></span><span class="n">W</span></code> und Kombinationen daraus möglich.</p>
+<img alt="../_images/layout_grid_align.png" class="align-right" src="../_images/layout_grid_align.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">W</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NE</span><span class="p">)</span>
+
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">label_3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">SW</span><span class="p">)</span>
+
+<span class="n">label_4</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">)</span>
+<span class="n">label_4</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wenn wir gegenüberliegende Himmelsrichtungen, z.B. <code class="docutils literal highlight highlight-default"><span></span><span class="n">N</span></code> und <code class="docutils literal highlight highlight-default"><span></span><span class="n">S</span></code> kombinieren, wird die Zelle gestreckt.</p>
+<img alt="../_images/layout_grid_stretch.png" class="align-right" src="../_images/layout_grid_stretch.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">EW</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">EW</span><span class="p">)</span>
+
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">label_3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NS</span><span class="p">)</span>
+
+<span class="n">label_4</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">)</span>
+<span class="n">label_4</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NSEW</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Über die Parameter <code class="docutils literal highlight highlight-default"><span></span><span class="n">columnspan</span></code> bzw. <code class="docutils literal highlight highlight-default"><span></span><span class="n">rowspan</span></code> können wir erreichen, das mehrere Zellen zusammengefasst werden.</p>
+<img alt="../_images/layout_grid_columnspan.png" class="align-right" src="../_images/layout_grid_columnspan.png" />
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">label_1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NSEW</span><span class="p">)</span>
+
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;1, 0&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">label_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NSEW</span><span class="p">)</span>
+
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">fenster</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;0,1 -&gt; 1,1&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">label_3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">NSEW</span><span class="p">,</span> <span class="n">columnspan</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Zuletzt aktualisiert am 05.10.2018.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
